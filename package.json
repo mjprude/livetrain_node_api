@@ -1,0 +1,14 @@
+{
+  "name": "livetrain-api",
+  "version": "1.0.0",
+  "description": "A restful API for realtime MTA subway trip data",
+  "main": "index.js",
+  "author": "mjprude <michaelprude@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.14.0",
+    "gtfs-realtime-bindings": "^0.0.4",
+    "mongodb": "^2.2.24",
+    "request": "^2.79.0"
+  }
+}
