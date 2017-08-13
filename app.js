@@ -21,10 +21,6 @@ function getLine(req, res) {
   });
 }
 
-app.listen(3001, function () {
-  console.log('Example app listening on port 3001!')
-})
-
 function massageData(data) {
   return data.entity.map(update => {
     const { trip_update } = update || {};
@@ -117,6 +113,11 @@ function _updateTrips(trips, tripId, stopTimeUpdate, updated) {
   return threeStops || [];
 }
 
+app.set('port', (process.env.PORT || 3001));
+
+app.listen(app.get('port'), function() {
+  console.log('Livetrain API is running on port', app.get('port'));
+});
 // Versioning
 const v1 = express.Router();
 const v2 = express.Router();
