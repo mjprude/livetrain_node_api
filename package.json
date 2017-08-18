@@ -2,12 +2,13 @@
   "name": "livetrain-api",
   "version": "0.0.1",
   "description": "A restful API for realtime MTA subway trip data",
-  "main": "app.js",
+  "main": "./lib/app.js",
   "author": "mjprude <michaelprude@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "server": "nodemon app.js"
+    "start": "node lib/app.js",
+    "server": "nodemon lib/app.js",
+    "test": "mocha 'tests/**/*.js'"
   },
   "dependencies": {
     "express": "~4.15.4",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
+    "eslint": "^4.4.1",
     "mocha": "^3.5.0",
     "nodemon": "^1.11.0"
   }
