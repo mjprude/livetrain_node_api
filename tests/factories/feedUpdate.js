@@ -1,14 +1,13 @@
-module.exports = function jsonFeedUpdate(time, entities) {
+module.exports = function jsonFeedUpdate(time, updates) {
   const start_date = _getStartDate(time);
-  let id = 10;
-  const entity = entities.map(e => {
-    const {
-      trip_id = '059200_C..N',
-      route_id = 'C',
-      stop_time_update = []
-    } = e;
-    id++;
-    return {
+  let id = 0;
+  let entity = []
+
+  Object.keys(updates).forEach(trip_id => {
+    const stop_time_update = updates[trip_id] || [];
+    const route_id = trip_id.split('_')[1][0];
+
+    entity.push({
       id,
       "is_deleted": false,
       "trip_update": {
@@ -27,6 +26,7 @@ module.exports = function jsonFeedUpdate(time, entities) {
             arrival = time + id,
             departure = arrival
           } = update;
+
           return {
             "stop_sequence": null,
             stop_id,
@@ -56,7 +56,36 @@ module.exports = function jsonFeedUpdate(time, entities) {
       },
       "vehicle": null,
       "alert": null
-    }
+    });
+    entity.push({
+      id: id + 1,
+      is_deleted: false,
+      trip_update: null,
+      vehicle: {
+        trip: {
+          trip_id,
+          route_id,
+          direction_id: null,
+          start_time: null,
+          start_date,
+          schedule_relationship: null
+        },
+        vehicle: null,
+        position: null,
+        current_stop_sequence: 21,
+        stop_id: null,
+        current_status: 1,
+        timestamp: {
+          low: time,
+          high: 0,
+          unsigned: true
+        },
+        congestion_level: null,
+        occupancy_status: null
+      },
+      alert: null
+    });
+    id = id + 2;
   });
   return {
     "header": {
