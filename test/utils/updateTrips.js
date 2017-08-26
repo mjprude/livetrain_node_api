@@ -90,6 +90,39 @@ describe('updateTrips', function() {
       trips = updateTrips(trips, feedUpdate2, 1200);
       expect(trips).to.deep.eq(expected);
     });
+
+    it('Takes the last old stop if all old stops are in the past', function() {
+      let trips = {};
+      const feedUpdate1 = {
+        '000001_L..N': [
+          { stop_id: 'stop1', arrival: 1000, departure: 1000 },
+          { stop_id: 'stop2', arrival: 1100, departure: 1100 },
+          { stop_id: 'stop3', arrival: 1200, departure: 1200 }
+        ]
+      };
+
+      const feedUpdate2 = {
+        '000001_L..N': [
+          { stop_id: 'stop4', arrival: 1500, departure: 1500 },
+          { stop_id: 'stop5', arrival: 1600, departure: 1600 }
+        ]
+      };
+
+      const expected = {
+        '000001_L..N': [
+          { stop_id: 'stop3', arrival: 1200, departure: 1200 },
+          { stop_id: 'stop4', arrival: 1500, departure: 1500 },
+          { stop_id: 'stop5', arrival: 1600, departure: 1600 }
+        ]
+      };
+
+      expect(trips).to.deep.eq({});
+      trips = updateTrips(trips, feedUpdate1, 1000);
+      expect(trips).to.deep.eq(feedUpdate1);
+
+      trips = updateTrips(trips, feedUpdate2, 1300);
+      expect(trips).to.deep.eq(expected);
+    });
   });
 
   context('On subsequent updates (adding stops to trip)', function() {

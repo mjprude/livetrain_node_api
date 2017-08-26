@@ -8,13 +8,15 @@
   "scripts": {
     "start": "node lib/app.js",
     "server": "nodemon lib/app.js",
-    "test": "mocha 'tests/**/*.js'"
+    "test": "mocha --recursive",
+    "cover": "nyc --reporter=lcov mocha --recursive"
   },
   "dependencies": {
     "express": "~4.15.4",
     "gtfs-realtime-bindings": "^0.0.4",
     "lodash": "^4.17.4",
     "mongodb": "~2.2.31",
+    "nyc": "^11.1.0",
     "request": "~2.81.0"
   },
   "devDependencies": {
