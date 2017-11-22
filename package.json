@@ -9,6 +9,7 @@
     "start": "node lib/app.js",
     "server": "nodemon lib/app.js",
     "test": "mocha --recursive",
+    "breaktest": "mocha --recursive --inspect-brk",
     "cover": "nyc --reporter=lcov mocha --recursive"
   },
   "dependencies": {
