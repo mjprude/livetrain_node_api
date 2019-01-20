@@ -13,17 +13,17 @@
     "cover": "nyc --reporter=lcov mocha --recursive"
   },
   "dependencies": {
-    "express": "~4.15.4",
+    "express": "^4.16.4",
     "gtfs-realtime-bindings": "^0.0.4",
     "lodash": "^4.17.4",
     "mongodb": "~2.2.31",
     "nyc": "^11.1.0",
-    "request": "~2.81.0"
+    "request": "^2.88.0"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
+    "chai": "^4.2.0",
     "eslint": "^4.4.1",
-    "mocha": "^3.5.0",
-    "nodemon": "^1.11.0"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
   }
 }
