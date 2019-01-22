@@ -1,0 +1,272 @@
+{
+  "header": {
+    "gtfs_realtime_version": "1.0",
+    "incrementality": 0,
+    "timestamp": {
+      "low": 1548123163,
+      "high": 0,
+      "unsigned": true
+    }
+  },
+  "entity": [
+    {
+      "id": "36000001",
+      "is_deleted": false,
+      "trip_update": {
+        "trip": {
+          "trip_id": "123946_G..N",
+          "route_id": "G",
+          "direction_id": null,
+          "start_time": null,
+          "start_date": "20190121",
+          "schedule_relationship": null
+        },
+        "vehicle": null,
+        "stop_time_update": [
+          {
+            "stop_sequence": null,
+            "stop_id": "G24N",
+            "arrival": {
+              "delay": null,
+              "time": {
+                "low": 1548123156,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "departure": {
+              "delay": null,
+              "time": {
+                "low": 1548123156,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "schedule_relationship": 0
+          },
+          {
+            "stop_sequence": null,
+            "stop_id": "G22N",
+            "arrival": {
+              "delay": null,
+              "time": {
+                "low": 1548123221,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "departure": {
+              "delay": null,
+              "time": {
+                "low": 1548123221,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "schedule_relationship": 0
+          }
+        ],
+        "timestamp": null,
+        "delay": null
+      },
+      "vehicle": null,
+      "alert": null
+    },
+    {
+      "id": "36000002",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": {
+        "trip": {
+          "trip_id": "123946_G..N",
+          "route_id": "G",
+          "direction_id": null,
+          "start_time": null,
+          "start_date": "20190121",
+          "schedule_relationship": null
+        },
+        "vehicle": null,
+        "position": null,
+        "current_stop_sequence": 19,
+        "stop_id": null,
+        "current_status": 1,
+        "timestamp": {
+          "low": 1548123156,
+          "high": 0,
+          "unsigned": true
+        },
+        "congestion_level": null,
+        "occupancy_status": null
+      },
+      "alert": null
+    },
+    {
+      "id": "36000003",
+      "is_deleted": false,
+      "trip_update": {
+        "trip": {
+          "trip_id": "123850_G..S",
+          "route_id": "G",
+          "direction_id": null,
+          "start_time": null,
+          "start_date": "20190121",
+          "schedule_relationship": null
+        },
+        "vehicle": null,
+        "stop_time_update": [
+          {
+            "stop_sequence": null,
+            "stop_id": "F23S",
+            "arrival": {
+              "delay": null,
+              "time": {
+                "low": 1548123146,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "departure": {
+              "delay": null,
+              "time": {
+                "low": 1548123146,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "schedule_relationship": 0
+          },
+          {
+            "stop_sequence": null,
+            "stop_id": "F24S",
+            "arrival": {
+              "delay": null,
+              "time": {
+                "low": 1548123221,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "departure": {
+              "delay": null,
+              "time": {
+                "low": 1548123221,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "schedule_relationship": 0
+          },
+          {
+            "stop_sequence": null,
+            "stop_id": "F25S",
+            "arrival": {
+              "delay": null,
+              "time": {
+                "low": 1548123311,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "departure": {
+              "delay": null,
+              "time": {
+                "low": 1548123311,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "schedule_relationship": 0
+          },
+          {
+            "stop_sequence": null,
+            "stop_id": "F26S",
+            "arrival": {
+              "delay": null,
+              "time": {
+                "low": 1548123461,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "departure": {
+              "delay": null,
+              "time": {
+                "low": 1548123461,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "schedule_relationship": 0
+          },
+          {
+            "stop_sequence": null,
+            "stop_id": "F27S",
+            "arrival": {
+              "delay": null,
+              "time": {
+                "low": 1548123551,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "departure": {
+              "delay": null,
+              "time": {
+                "low": 1548123551,
+                "high": 0,
+                "unsigned": false
+              },
+              "uncertainty": null
+            },
+            "schedule_relationship": 0
+          }
+        ],
+        "timestamp": null,
+        "delay": null
+      },
+      "vehicle": null,
+      "alert": null
+    },
+    {
+      "id": "36000004",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": {
+        "trip": {
+          "trip_id": "123850_G..S",
+          "route_id": "G",
+          "direction_id": null,
+          "start_time": null,
+          "start_date": "20190121",
+          "schedule_relationship": null
+        },
+        "vehicle": null,
+        "position": null,
+        "current_stop_sequence": 16,
+        "stop_id": null,
+        "current_status": 1,
+        "timestamp": {
+          "low": 1548123146,
+          "high": 0,
+          "unsigned": true
+        },
+        "congestion_level": null,
+        "occupancy_status": null
+      },
+      "alert": null
+    }
+  ]
+}
